@@ -8,6 +8,7 @@ import android.view.MenuItem
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.artonov.catchat.databinding.ActivityMainBinding
@@ -26,7 +27,16 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         val config = AppBarConfiguration(navController.graph)
-        binding.toolBar.setupWithNavController(navController, config)
+        // Bottom Navbar
+        binding.bottomNavigationView.setupWithNavController(navController)
+        val builder = AppBarConfiguration.Builder(navController.graph)
+        // Nav Drawer
+        builder.setOpenableLayout(binding.drawerLayout)
+
+        val appBarConfiguration = builder.build()
+        // Toolbar
+        binding.toolBar.setupWithNavController(navController, appBarConfiguration)
+        NavigationUI.setupWithNavController(binding.navView, navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

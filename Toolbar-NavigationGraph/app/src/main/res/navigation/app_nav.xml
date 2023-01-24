@@ -29,4 +29,9 @@
         android:name="com.artonov.catchat.KucingActivity"
         android:label="activity_kucing"
         tools:layout="@layout/activity_kucing" />
+    <fragment
+        android:id="@+id/sentFragment"
+        android:name="com.artonov.catchat.SentFragment"
+        android:label="fragment_sent"
+        tools:layout="@layout/fragment_sent" />
 </navigation>
