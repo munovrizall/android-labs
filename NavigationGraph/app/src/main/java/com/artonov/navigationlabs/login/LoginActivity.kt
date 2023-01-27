@@ -1,7 +1,8 @@
-package com.artonov.navigationlabs
+package com.artonov.navigationlabs.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.artonov.navigationlabs.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

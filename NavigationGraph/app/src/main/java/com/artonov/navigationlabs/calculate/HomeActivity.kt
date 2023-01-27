@@ -1,7 +1,8 @@
-package com.artonov.navigationlabs
+package com.artonov.navigationlabs.calculate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.artonov.navigationlabs.R
 import com.artonov.navigationlabs.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity(R.layout.fragment_output) {

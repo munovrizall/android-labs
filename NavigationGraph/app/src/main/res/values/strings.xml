@@ -8,4 +8,6 @@
     <string name="calculate">Calculate!</string>
     <string name="lebar">Lebar</string>
     <string name="tinggi">Tinggi</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>

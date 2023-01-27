@@ -6,7 +6,7 @@
     app:startDestination="@id/inputFragment">
     <fragment
         android:id="@+id/inputFragment"
-        android:name="com.artonov.navigationlabs.InputFragment"
+        android:name="com.artonov.navigationlabs.calculate.InputFragment"
         android:label="fragment_input"
         tools:layout="@layout/fragment_input" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/outputFragment"
-        android:name="com.artonov.navigationlabs.OutputFragment"
+        android:name="com.artonov.navigationlabs.calculate.OutputFragment"
         android:label="fragment_output"
         tools:layout="@layout/fragment_output" >
         <argument

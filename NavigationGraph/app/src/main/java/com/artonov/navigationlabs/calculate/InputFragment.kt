@@ -1,19 +1,14 @@
-package com.artonov.navigationlabs
+package com.artonov.navigationlabs.calculate
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log.v
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.artonov.navigationlabs.R
 import com.artonov.navigationlabs.databinding.FragmentInputBinding
-import kotlinx.android.synthetic.main.fragment_input.*
 
 class InputFragment : Fragment(R.layout.fragment_input) {
 
