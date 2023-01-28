@@ -9,7 +9,6 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolBar"
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
-        app:title="Login"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/purple_500"

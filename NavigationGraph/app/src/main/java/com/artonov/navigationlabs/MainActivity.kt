@@ -3,6 +3,9 @@ package com.artonov.navigationlabs
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import com.artonov.navigationlabs.calculate.HomeActivity
 import com.artonov.navigationlabs.databinding.ActivityMainBinding
 import com.artonov.navigationlabs.login.LoginActivity
