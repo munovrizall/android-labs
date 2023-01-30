@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/inboxFragment">
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.artonov.catchat.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox" >
+        <action
+            android:id="@+id/action_inboxFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.artonov.catchat.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.artonov.catchat.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <activity
+        android:id="@+id/kucingActivity"
+        android:name="com.artonov.catchat.KucingActivity"
+        android:label="activity_kucing"
+        tools:layout="@layout/activity_kucing" />
+    <fragment
+        android:id="@+id/sentFragment"
+        android:name="com.artonov.catchat.SentFragment"
+        android:label="fragment_sent"
+        tools:layout="@layout/fragment_sent" />
+</navigation>
