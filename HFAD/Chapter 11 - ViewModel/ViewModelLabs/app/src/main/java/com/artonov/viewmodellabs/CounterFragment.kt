@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.artonov.viewmodellabs.databinding.FragmentCounterBinding
-import com.artonov.viewmodellabs.databinding.FragmentResultBinding
+import com.artonov.viewmodellabs.viewmodel.CounterViewModel
 
 class CounterFragment : Fragment() {
 
@@ -25,11 +26,17 @@ class CounterFragment : Fragment() {
         val view = binding.root
 
         viewModel = ViewModelProvider(this).get(CounterViewModel::class.java)
-        binding.tvCounter.text = viewModel.number.toString()
+        updateScreen()
 
         binding.btnCount.setOnClickListener() {
             viewModel.incrementNumber()
-            binding.tvCounter.text = viewModel.number.toString()
+            updateScreen()
+        }
+
+        binding.btnSend.setOnClickListener() {
+            val action =
+                CounterFragmentDirections.actionCounterFragmentToResultFragment(viewModel.number)
+            view.findNavController().navigate(action)
         }
         return view
     }
@@ -37,6 +44,10 @@ class CounterFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun updateScreen() {
+        binding.tvCounter.text = viewModel.number.toString()
     }
 
 }
