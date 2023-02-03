@@ -1,4 +1,4 @@
-package com.artonov.viewmodellabs
+package com.artonov.viewmodellabs.viewmodel
 
 import androidx.lifecycle.ViewModel
 

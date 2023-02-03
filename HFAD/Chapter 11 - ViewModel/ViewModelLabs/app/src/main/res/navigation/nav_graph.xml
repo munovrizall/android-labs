@@ -18,5 +18,12 @@
         android:id="@+id/resultFragment"
         android:name="com.artonov.viewmodellabs.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="countNumber"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_counterFragment"
+            app:destination="@id/counterFragment" />
+    </fragment>
 </navigation>
